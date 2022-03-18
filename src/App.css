@@ -1,38 +1,180 @@
-.App {
-  text-align: center;
+html {
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  height: 100%;
+  background-image: linear-gradient(#4000e8 -5px, #bd005d, #4000e8 100%);
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.add-item {
+  background-image: linear-gradient(0deg, #f3c965, #643419 800px);
+  padding: 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.add-item--addQA {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid black;
+  cursor: pointer;
+  background: linear-gradient(rgba(96,1,230,255), #53004a);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.add-item--input {
+  padding: 10px;
+  text-indent: 10px;
+  border-radius: 10px;
+  border: 2x solid black;
+  margin: 10px;
+  width: 700px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app {
+  position: relative;
+  width: 1000px;
+  margin-left: -500px;
+  left: 50%;
+  top: 50px;
+  border: 5px solid black;
+  border-radius: 25px;
+}
+
+.bottom-margin {
+  position: relative;
+  bottom: 0px;
+  height: 100px;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.table {
+  background-image: linear-gradient(#f3c965, #aa7041);
+  padding: 30px;
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  border-radius: 0px 0px 20px 20px;
+  border-top: 2px solid black;
+}
+
+.table--cell1 {
+  align-items: center;
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: bold;
+  height: 150px;
+  max-width: 380px;
+  padding: 0px 10px;
+  text-align: left;
+  width: 400px;  
+}
+
+.table--cell2 {
+  height: 150px;
+  width: 110px;
+  text-align: left;
+  color: black;
+  font-weight: bold;
+  max-width: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 10px;
+}
+
+.table--cell3 {
+  height: 150px;
+  width: 400px;
+  text-align: left;
+  color: black;
+  font-weight: bold;
+  max-width: 380px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0px 10px;
+}
+
+.table--delete {
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid black;
+  background: linear-gradient(red, #4e0401);
+  color: white;
+  cursor: pointer;
+  margin: 17px 10px;
+}
+
+.table--head1{
+  width: 375px;
+  display: flex;
+  padding: 20px 5px;
+}
+
+.table--head3{
+  width: 375px;
+  display: flex;
+  padding: 20px 5px;
+}
+
+.table--text1 {
+  background: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 12px;
+  margin-left: auto;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.table--text2 {
+  background: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 12px;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.table--title1 {
+  background: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  height: 60px;
+  margin-left: 10px;
+  max-height: 70px;
+  max-width: 330px;
+  min-height: 25px;
+  min-width: 330px;
+  padding: 10px 20px;
+  width: 330px;
+}
+
+.table--title2 {
+  background: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  height: 60px;
+  margin-left: 5px;
+  max-height: 70px;
+  max-width: 330px;
+  min-height: 25px;
+  min-width: 330px;
+  padding: 10px 20px;
+  width: 330px;  
 }

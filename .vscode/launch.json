@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "pwa-chrome",
+            "name": "http://console.log(\"hi\\n\\n\\n\")",
+            "request": "launch",
+            "url": "http://console.log(\"hi\\n\\n\\n\")"
+        }
+    ]
+}

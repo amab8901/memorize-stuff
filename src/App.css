@@ -91,6 +91,8 @@ body {
   align-items: center;
   justify-content: center;
   padding: 0px 10px;
+  position: relative;
+  display: flex;
 }
 
 .table--cell3 {
@@ -106,11 +108,23 @@ body {
   padding: 0px 10px;
 }
 
+.table--clear{
+  background: linear-gradient(#C4C4C4, black);
+  height: 40px;
+  width: 60px;
+  color: white;
+  border-radius: 10px;
+  border: 2px solid black;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+}
+
 .table--delete {
   padding: 10px;
   border-radius: 10px;
   border: 2px solid black;
-  background: linear-gradient(red, #4e0401);
+  background: linear-gradient(red, black);
   color: white;
   cursor: pointer;
   margin: 17px 10px;

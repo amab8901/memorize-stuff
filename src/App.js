@@ -1,7 +1,6 @@
 import './App.css';
 import React from "react"
 import {v4 as uuidv4} from "uuid"
-import initialList from "./dataLists/initialList"
 
 import List from "./components/List"
 import AddItem from "./components/AddItem"
@@ -53,6 +52,11 @@ export default function App() {
     }
   }
 
+  function handleClear() {
+    localStorage.setItem("list", JSON.stringify([]))
+    setList(JSON.parse(localStorage.getItem("list")))
+  }
+
   function handleDelete(id) {
     const newList = list.filter((item) => item.id !== id)
 
@@ -91,6 +95,7 @@ export default function App() {
           handleDelete={handleDelete}
           toggleShowQuestion={toggleShowQuestion}
           toggleShowAnswer={toggleShowAnswer}
+          handleClear={handleClear}
         />
       </div>
       <div className="bottom-margin"></div>

@@ -1,7 +1,8 @@
 import React from "react"
 
 export default function List(props) {
-    const [list, handleDelete, toggleShowQuestion, toggleShowAnswer] = [props.list, props.handleDelete, props.toggleShowQuestion, props.toggleShowAnswer]
+    const [list, handleDelete, toggleShowQuestion, toggleShowAnswer, handleClear] = 
+    [props.list, props.handleDelete, props.toggleShowQuestion, props.toggleShowAnswer, props.handleClear]
 
     return(
         <div className="table">
@@ -17,6 +18,9 @@ export default function List(props) {
                             ></textarea>                    
                         </td>
                         <td className="table--head2"> 
+                            <button className="table--clear" onClick={handleClear}>
+                                Clear
+                            </button>
                         </td>
                         <td className="table--head3">
                             <textarea 

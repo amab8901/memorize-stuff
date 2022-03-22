@@ -140,6 +140,19 @@ body {
   width: 147.5px;
 }
 
+.table--shuffle{
+  background: linear-gradient(#C4C4C4, black);
+  height: 40px;
+  width: 60px;
+  color: white;
+  border-radius: 10px;
+  border: 2px solid black;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
 .table--head3{
   width: 375px;
   display: flex;

@@ -11,6 +11,8 @@ export default function App() {
   const [question, setQuestion] = React.useState('')
   const [answer, setAnswer] = React.useState('')
 
+
+
   function handleChangeQuestion(event) {
     const {value} = event.target
     if(
@@ -63,6 +65,29 @@ export default function App() {
     setList(newList)
   }
 
+  function handleShuffle() {
+    let newList = shuffle(list) 
+    localStorage.setItem("list", JSON.stringify(newList))
+    setList(JSON.parse(localStorage.getItem("list")))
+    
+  }
+
+  function shuffle(array) {
+    let currentIndex = array.length, randomIndex
+
+    while (currentIndex !== 0) {
+      randomIndex = Math.floor(Math.random() * currentIndex)
+      currentIndex--
+      
+      [array[currentIndex], array[randomIndex]] = 
+        [array[randomIndex], array[currentIndex]]
+    }
+    return array
+  }
+
+  let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  shuffle(arr)
+
   function toggleShowQuestion(id) {
     setList(list.map((item) => ({
       ...item,
@@ -96,6 +121,7 @@ export default function App() {
           toggleShowQuestion={toggleShowQuestion}
           toggleShowAnswer={toggleShowAnswer}
           handleClear={handleClear}
+          handleShuffle={handleShuffle}
         />
       </div>
       <div className="bottom-margin"></div>

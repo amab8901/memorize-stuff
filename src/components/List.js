@@ -16,7 +16,7 @@ export default function List(props) {
                                 resize="both"
                             ></textarea>                    
                         </td>
-                        <td> 
+                        <td className="table--head2"> 
                         </td>
                         <td className="table--head3">
                             <textarea 

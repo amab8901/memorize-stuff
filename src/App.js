@@ -8,7 +8,7 @@ import AddItem from "./components/AddItem"
 
 export default function App() {
   
-  const [list, setList] = React.useState(initialList)
+  const [list, setList] = React.useState(JSON.parse(localStorage.getItem("list")))
   const [question, setQuestion] = React.useState('')
   const [answer, setAnswer] = React.useState('')
 
@@ -21,6 +21,10 @@ export default function App() {
       setQuestion(value)
     }
   }
+
+  React.useEffect(()=>{
+    localStorage.setItem("list", JSON.stringify(list))
+  },[list])
 
   function handleChangeAnswer(event){
     const {value} = event.target
@@ -35,8 +39,8 @@ export default function App() {
   function handleAdd() {
     if(question&&answer){
       const newList = list.concat( [{   
-        answer: answer, 
         id: uuidv4(),
+        answer: answer, 
         showQuestion: false,
         showAnswer: false,
         question: question,

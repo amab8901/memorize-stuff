@@ -122,6 +122,10 @@ body {
   padding: 20px 5px;
 }
 
+.table--head2{
+  width: 147.5px;
+}
+
 .table--head3{
   width: 375px;
   display: flex;
